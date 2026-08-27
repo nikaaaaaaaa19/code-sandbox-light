@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KidSpark Activities — Fun Things To Do With Kids</title>
+<meta name="description" content="Discover and share fun activities for kids — crafts, outdoor games, science experiments, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          heading: ['Baloo 2', 'sans-serif'],
+          body: ['Nunito', 'sans-serif'],
+        },
+        colors: {
+          sunny: '#FFC93C',
+          coral: '#FF6B6B',
+          sky: '#4ECDC4',
+          grape: '#8675A9',
+          leaf: '#7BC950',
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-[#FFF8ED] text-slate-800">
+
+<!-- ===== Header ===== -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b-4 border-sunny shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-2 shrink-0" id="site-logo">
+      <span class="text-3xl">🎈</span>
+      <span class="font-heading text-2xl sm:text-3xl font-bold text-coral">KidSpark</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 font-heading font-semibold text-slate-600" id="main-nav">
+      <a href="#browse-section" class="hover:text-coral transition">Browse</a>
+      <a href="#post-section" class="hover:text-coral transition">Post an Activity</a>
+      <a href="#about-section" class="hover:text-coral transition">About</a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="relative hidden sm:block">
+        <input id="header-search" type="text" placeholder="Search activities..."
+          class="w-48 md:w-64 pl-9 pr-3 py-2 rounded-full border-2 border-sky/40 focus:border-sky outline-none text-sm">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+      </div>
+      <a href="#post-section" class="bg-coral hover:bg-red-500 text-white font-heading font-bold px-4 py-2 rounded-full shadow transition whitespace-nowrap">
+        <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">Post Activity</span>
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-600" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-nav" class="hidden md:hidden flex-col gap-3 px-4 pb-4 font-heading font-semibold text-slate-600">
+    <input id="mobile-search" type="text" placeholder="Search activities..." class="w-full px-3 py-2 rounded-full border-2 border-sky/40 outline-none text-sm mb-2">
+    <a href="#browse-section" class="block py-1">Browse</a>
+    <a href="#post-section" class="block py-1">Post an Activity</a>
+    <a href="#about-section" class="block py-1">About</a>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ===== Hero ===== -->
+<section class="relative overflow-hidden bg-gradient-to-br from-sky via-[#6bd9d2] to-leaf text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 relative z-10">
+    <div class="max-w-2xl">
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow-sm">
+        Fun, Easy Activities <br class="hidden sm:block"> For Curious Kids
+      </h1>
+      <p class="mt-4 text-lg sm:text-xl text-white/90">
+        Discover crafts, games, science experiments and more shared by parents, teachers and caregivers —
+        or post your own favorite activity for others to try!
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#browse-section" class="bg-white text-coral font-heading font-bold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-compass"></i> Browse Activities
+        </a>
+        <a href="#post-section" class="bg-sunny text-slate-800 font-heading font-bold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-square-plus"></i> Post an Activity
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="absolute -bottom-6 left-0 w-full text-5xl sm:text-6xl opacity-90 select-none flex justify-around px-4 pointer-events-none">
+    <span>🖍️</span><span class="hidden sm:inline">🧩</span><span>⚽</span><span class="hidden sm:inline">🎨</span><span>🔬</span><span class="hidden sm:inline">🎶</span><span>🪁</span>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6">
+
+  <!-- ===== Stats ===== -->
+  <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 -mt-6 sm:-mt-8 relative z-10 mb-10">
+    <div class="bg-white rounded-2xl shadow-lg p-4 text-center border-b-4 border-coral">
+      <div id="stat-total" class="font-heading text-2xl sm:text-3xl font-bold text-coral">0</div>
+      <div class="text-xs sm:text-sm text-slate-500 font-semibold">Activities</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-4 text-center border-b-4 border-sky">
+      <div id="stat-categories" class="font-heading text-2xl sm:text-3xl font-bold text-sky">0</div>
+      <div class="text-xs sm:text-sm text-slate-500 font-semibold">Categories</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-4 text-center border-b-4 border-sunny">
+      <div id="stat-likes" class="font-heading text-2xl sm:text-3xl font-bold text-[#e0a800]">0</div>
+      <div class="text-xs sm:text-sm text-slate-500 font-semibold">Hearts Given</div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-4 text-center border-b-4 border-leaf">
+      <div id="stat-authors" class="font-heading text-2xl sm:text-3xl font-bold text-leaf">0</div>
+      <div class="text-xs sm:text-sm text-slate-500 font-semibold">Contributors</div>
+    </div>
+  </section>
+
+  <!-- ===== Browse Section ===== -->
+  <section id="browse-section" class="mb-16 scroll-mt-24">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+      <div>
+        <h2 class="font-heading text-3xl font-bold text-slate-800">
+          <i class="fa-solid fa-compass text-sky"></i> Browse Activities
+        </h2>
+        <p class="text-slate-500 mt-1">Filter by category and age to find the perfect activity.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <label for="sort-select" class="text-sm font-semibold text-slate-500">Sort:</label>
+        <select id="sort-select" class="border-2 border-slate-200 rounded-full px-3 py-2 text-sm font-semibold outline-none focus:border-sky">
+          <option value="newest">Newest</option>
+          <option value="popular">Most Loved</option>
+          <option value="quick">Quickest First</option>
+          <option value="az">A - Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-2xl shadow p-4 sm:p-5 mb-8 flex flex-wrap gap-3 items-center">
+      <span class="font-heading font-bold text-slate-600 text-sm mr-1"><i class="fa-solid fa-filter"></i> Filters:</span>
+      <select id="filter-category" class="border-2 border-slate-200 rounded-full px-3 py-2 text-sm font-semibold outline-none focus:border-coral">
+        <option value="">All Categories</option>
+      </select>
+      <select id="filter-age" class="border-2 border-slate-200 rounded-full px-3 py-2 text-sm font-semibold outline-none focus:border-coral">
+        <option value="">All Ages</option>
+      </select>
+      <button id="clear-filters" class="text-sm font-semibold text-coral hover:underline ml-auto">
+        <i class="fa-solid fa-rotate-left"></i> Clear filters
+      </button>
+    </div>
+
+    <!-- Category quick chips -->
+    <div id="category-chips" class="flex flex-wrap gap-2 mb-8"></div>
+
+    <!-- Loading -->
+    <div id="loading-state" class="text-center py-16">
+      <div class="text-5xl mb-3 animate-bounce">🧸</div>
+      <p class="text-slate-400 font-semibold">Loading fun activities...</p>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="hidden text-center py-16">
+      <div class="text-6xl mb-3">🔍</div>
+      <p class="text-slate-500 font-semibold text-lg">No activities found. Try different filters, or be the first to post one!</p>
+    </div>
+
+    <!-- Cards grid -->
+    <div id="activities-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- ===== Post Section ===== -->
+  <section id="post-section" class="mb-16 scroll-mt-24">
+    <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-10 border-t-8 border-coral">
+      <div class="text-center mb-8">
+        <h2 class="font-heading text-3xl font-bold text-slate-800">
+          <i class="fa-solid fa-square-plus text-coral"></i> Post a New Activity
+        </h2>
+        <p class="text-slate-500 mt-2">Share an activity you love — help other parents and educators find great ideas for kids!</p>
+      </div>
+
+      <form id="activity-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="md:col-span-2">
+          <label for="input-title" class="block font-heading font-bold text-slate-700 mb-1">Activity Title *</label>
+          <input id="input-title" type="text" required maxlength="100" placeholder="e.g. Rainbow Handprint Painting"
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+        </div>
+
+        <div>
+          <label for="input-category" class="block font-heading font-bold text-slate-700 mb-1">Category *</label>
+          <select id="input-category" required class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+            <option value="" disabled selected>Choose a category</option>
+            <option>Arts & Crafts</option>
+            <option>Outdoor</option>
+            <option>Indoor</option>
+            <option>Educational</option>
+            <option>Science</option>
+            <option>Sports & Physical</option>
+            <option>Sensory Play</option>
+            <option>Party Games</option>
+            <option>Music & Dance</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="input-age" class="block font-heading font-bold text-slate-700 mb-1">Age Group *</label>
+          <select id="input-age" required class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+            <option value="" disabled selected>Choose an age group</option>
+            <option>Toddler (1-3)</option>
+            <option>Preschool (3-5)</option>
+            <option>Kids (6-9)</option>
+            <option>Tween (10-12)</option>
+            <option>All Ages</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="input-duration" class="block font-heading font-bold text-slate-700 mb-1">Duration (minutes)</label>
+          <input id="input-duration" type="number" min="1" max="600" placeholder="e.g. 30"
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+        </div>
+
+        <div>
+          <label for="input-author" class="block font-heading font-bold text-slate-700 mb-1">Your Name</label>
+          <input id="input-author" type="text" maxlength="60" placeholder="e.g. Jamie P."
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+        </div>
+
+        <div class="md:col-span-2">
+          <label for="input-materials" class="block font-heading font-bold text-slate-700 mb-1">Materials Needed</label>
+          <input id="input-materials" type="text" maxlength="200" placeholder="e.g. Paper, paint, brushes"
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+        </div>
+
+        <div class="md:col-span-2">
+          <label for="input-image" class="block font-heading font-bold text-slate-700 mb-1">Image URL (optional)</label>
+          <input id="input-image" type="url" placeholder="https://example.com/photo.jpg"
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral">
+          <p class="text-xs text-slate-400 mt-1">Leave blank to use a fun default icon instead of a photo.</p>
+        </div>
+
+        <div class="md:col-span-2">
+          <label for="input-description" class="block font-heading font-bold text-slate-700 mb-1">Description / Instructions *</label>
+          <textarea id="input-description" required maxlength="1000" rows="4" placeholder="Explain how to do this activity step by step..."
+            class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-coral resize-none"></textarea>
+        </div>
+
+        <div class="md:col-span-2 flex items-center justify-between flex-wrap gap-3 mt-2">
+          <p id="form-message" class="text-sm font-semibold hidden"></p>
+          <button type="submit" id="submit-btn" class="ml-auto bg-coral hover:bg-red-500 text-white font-heading font-bold px-8 py-3 rounded-full shadow transition inline-flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Post Activity
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about-section" class="mb-16 scroll-mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-4xl mb-3">🌟</div>
+        <h3 class="font-heading font-bold text-lg mb-2">Community Powered</h3>
+        <p class="text-slate-500 text-sm">Every activity is shared by real parents, teachers and caregivers just like you.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-4xl mb-3">🧠</div>
+        <h3 class="font-heading font-bold text-lg mb-2">Learn Through Play</h3>
+        <p class="text-slate-500 text-sm">From science experiments to sensory bins, every idea helps kids grow while having fun.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-4xl mb-3">❤️</div>
+        <h3 class="font-heading font-bold text-lg mb-2">Free to Share</h3>
+        <p class="text-slate-500 text-sm">Post as many activities as you like — no sign-up required. Just fill the form and share!</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Activity Detail Modal ===== -->
+<div id="detail-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+    <button id="close-modal" class="absolute top-4 right-4 bg-white/90 rounded-full w-9 h-9 flex items-center justify-center text-xl text-slate-500 hover:text-coral shadow z-10" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="bg-slate-800 text-slate-300 mt-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">🎈</span>
+        <span class="font-heading text-xl font-bold text-white">KidSpark</span>
+      </div>
+      <p class="text-sm text-slate-400">A friendly place to discover and share fun activities for kids of all ages.</p>
+    </div>
+    <div>
+      <h4 class="font-heading font-bold text-white mb-2">Quick Links</h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#browse-section" class="hover:text-coral">Browse Activities</a></li>
+        <li><a href="#post-section" class="hover:text-coral">Post an Activity</a></li>
+        <li><a href="#about-section" class="hover:text-coral">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading font-bold text-white mb-2">Categories</h4>
+      <ul id="footer-categories" class="flex flex-wrap gap-2 text-sm"></ul>
+    </div>
+  </div>
+  <div class="border-t border-slate-700 text-center text-xs text-slate-500 py-4">
+    Made with ❤️ for curious kids everywhere.
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
